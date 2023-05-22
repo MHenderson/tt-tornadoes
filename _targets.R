@@ -80,7 +80,7 @@ list(
   ),
   tar_target(
     name = save_plot,
-    command = ggsave(plot = ky_tornadoes_plot, filename = "plot/ky_tornadoes.png", bg = "white", width = 10, height = 8),
+    command = ggsave(plot = ky_tornadoes_plot, filename = "plot/ky-tornadoes-plot.png", bg = "white", width = 10, height = 8),
     format = "file"
   )
 )
