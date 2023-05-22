@@ -1,2 +1,9 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-tornados|stem|f787c59c038fe587|ccc41c45ed38acf6|7199b9143a2e7ccc|78674093||t19498.4215024854s|9dccd1fcc47ac6ff|1681357|rds|local|vector|||1.714||
+ky_counties|stem|99c9b914775693df|5b15e4779e0695fd|d51b5b11aac2e9b8|-1737481470||t19499.5966337671s|6033e6fde96243cf|2930658|rds|local|vector|||4.37||
+ky_landmarks|stem|9e1c38e1ec84e1a6|e96e3ba2b22fdc40|1910706c38146160|1601931491||t19499.5965521939s|d009e7d7cfcecb25|473278|rds|local|vector|||1.622||
+ky_tornadoes|stem|99634d74cad9ba4d|513243b686ca602c|7a27e2a706bb0d17|-421373557||t19499.599066563s|5e052c2280b523a5|6874|rds|local|vector|||0.035||
+ky_tornadoes_plot|stem|cf061702b4cae806|4fb595efabc12ad0|008ca3dfc419165d|289596895||t19499.6032599873s|dc46f5a9c7660e95|17706120|rds|local|vector|||0.028||
+ky_towns|stem|72e64a8d30f52e25|3a58f3127d907af1|dbdc649f8fec6e40|729882822||t19499.5966341838s|a147417cf14a9968|965|rds|local|vector|||0.028||
+save_plot|stem|739c826659a6ed92|2fd4c4e51d4980ed|ae83690de0efce85|-938188392|plot/ky_tornadoes.png|t19499.6032798018s|bb5e73fd86a60969|458082|file|local|vector|||1.699|st_point_on_surface may not give correct results for longitudelatitude data|
+to_linestring|function|99294bc3dc697528|||||||||||||||
+tornados|stem|f787c59c038fe587|ccc41c45ed38acf6|7199b9143a2e7ccc|78674093||t19499.5965793696s|9dccd1fcc47ac6ff|1681357|rds|local|vector|||1.839||

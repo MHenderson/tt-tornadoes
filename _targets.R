@@ -9,7 +9,7 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-  packages = c("dplyr", "janitor", "readr", "sf", "tibble", "tigris"), # packages that your targets need to run
+  packages = c("dplyr", "ggplot2", "janitor", "readr", "sf", "tibble", "tigris"), # packages that your targets need to run
   format = "rds" # default storage format
   # Set other options as needed.
 )
@@ -52,15 +52,35 @@ list(
     name = ky_tornadoes,
     command = {
 
-      ky_tornados <- tornados |>
+      ky_tornadoes <- tornados |>
         filter(stf == 21) |>
         filter(elat != 0) |>
         filter(date >= "2007-07-01") |>
         filter(date <= "2010-08-28")
 
-      ky_tornados$geom <- sapply(1:nrow(ky_tornados), to_linestring, simplify = FALSE)
-      st_sf(ky_tornados, crs = 4326)
+      to_linestring <- function(i) {
+        st_linestring(matrix(as.numeric(ky_tornadoes[i, c("slon", "elon", "slat", "elat")]), nrow = 2))
+      }
+
+      ky_tornadoes$geom <- sapply(1:nrow(ky_tornadoes), to_linestring, simplify = FALSE)
+      st_sf(ky_tornadoes, crs = 4326)
 
     }
+  ),
+  tar_target(
+    name = ky_tornadoes_plot,
+    command = {
+      ggplot() +
+        geom_sf(data = ky_counties, fill = "white", color = "black") +
+        geom_sf(data = ky_tornadoes, aes(colour = as.factor(mag))) +
+        geom_sf(data = ky_towns) +
+        geom_sf_text(data = ky_towns, aes(label = FULLNAME), nudge_x = -.2, nudge_y = -.2) +
+        theme_void()
+    }
+  ),
+  tar_target(
+    name = save_plot,
+    command = ggsave(plot = ky_tornadoes_plot, filename = "plot/ky_tornadoes.png", bg = "white", width = 10, height = 8),
+    format = "file"
   )
 )
