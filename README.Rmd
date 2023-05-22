@@ -19,44 +19,17 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 ```{r}
-library(dplyr)
 library(ggplot2)
-library(janitor)
-library(sf)
 library(targets)
-library(tigris)
 
-tornados <- tar_read(tornados)
+ky_tornados <- tar_read(ky_tornados)
+ky_counties <- tar_read(ky_counties)
+ky_towns <- tar_read(ky_towns)
 
-ky_tornados <- tornados |>
-  filter(stf == 21) |>
-  filter(elat != 0) |>
-  filter(date >= "2007-07-01") |>
-  filter(date <= "2010-08-28")
-
-f <- function(i) {
-  st_linestring(matrix(as.numeric(ky_tornados[i, c("slon", "elon", "slat", "elat")]), nrow = 2))
-}
-
-ky_tornados$geom <- sapply(1:nrow(ky_tornados), f, simplify = FALSE)
-
-ky_tornados <- st_sf(ky_tornados, crs = 4326)
-
-kentucky_counties <- counties(state = "KY") |>
-  clean_names()
-
-ky_landmarks <- landmarks("KY")
-ky_towns_to_plot <- c("Berea", "Bowling Green")
-ky_towns <- ky_landmarks |>
-  filter(FULLNAME %in% ky_towns_to_plot) |>
-  st_transform(crs = 4326)
-
-kentucky_counties |>
-  ggplot() +
-    geom_sf(fill = "white", color = "black") +
-    geom_sf(data = ky_tornados, aes(colour = as.factor(mag))) +
-    geom_sf(data = ky_towns) +
-    geom_sf_text(data = ky_towns, aes(label = FULLNAME), nudge_x = -.2, nudge_y = -.2) +
-    theme_void()
+ggplot() +
+  geom_sf(data = ky_counties, fill = "white", color = "black") +
+  geom_sf(data = ky_tornados, aes(colour = as.factor(mag))) +
+  geom_sf(data = ky_towns) +
+  geom_sf_text(data = ky_towns, aes(label = FULLNAME), nudge_x = -.2, nudge_y = -.2) +
+  theme_void()
 ```
-
