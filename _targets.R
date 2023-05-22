@@ -54,9 +54,7 @@ list(
 
       ky_tornadoes <- tornados |>
         filter(stf == 21) |>
-        filter(elat != 0) |>
-        filter(date >= "2007-07-01") |>
-        filter(date <= "2010-08-28")
+        filter(elat != 0)
 
       to_linestring <- function(i) {
         st_linestring(matrix(as.numeric(ky_tornadoes[i, c("slon", "elon", "slat", "elat")]), nrow = 2))
