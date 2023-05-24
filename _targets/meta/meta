@@ -1,9 +1,9 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-ky_counties|stem|99c9b914775693df|5b15e4779e0695fd|d51b5b11aac2e9b8|-1737481470||t19500.6365531238s|6033e6fde96243cf|2930658|rds|local|vector|||5.377||
-ky_landmarks|stem|9e1c38e1ec84e1a6|e96e3ba2b22fdc40|1910706c38146160|1601931491||t19500.6364865948s|d009e7d7cfcecb25|473278|rds|local|vector|||5.208||
-ky_tornadoes|stem|a39db056595a9208|80c3c0c19fcf59c4|21ef754e694a818d|-421373557||t19500.6365996061s|5e592d62fb2f7eba|46296|rds|local|vector|||0.183||
-ky_tornadoes_plot|stem|3adc3cd4c2caceae|4fb595efabc12ad0|deb732f007c98480|289596895||t19500.6366251622s|fece64f1ae795f77|17946592|rds|local|vector|||0.034||
-ky_towns|stem|72e64a8d30f52e25|3a58f3127d907af1|dbdc649f8fec6e40|729882822||t19500.636597245s|a147417cf14a9968|965|rds|local|vector|||0.122||
-save_plot|stem|3b0bb18749d7f3a5|55af441a73fea0c8|ad786656a638cf4a|-938188392|plot/ky-tornadoes-plot.png|t19500.6366510423s|662b27d6f55fde0e|737148|file|local|vector|||2.214|st_point_on_surface may not give correct results for longitudelatitude data|
+ky_counties|stem|99c9b914775693df|5b15e4779e0695fd|d51b5b11aac2e9b8|-1737481470||t19501.4266869682s|6033e6fde96243cf|2930658|rds|local|vector|||4.708||
+ky_landmarks|stem|9e1c38e1ec84e1a6|e96e3ba2b22fdc40|1910706c38146160|1601931491||t19501.4266255773s|d009e7d7cfcecb25|473278|rds|local|vector|||2.414||
+ky_tornadoes|stem|a39db056595a9208|80c3c0c19fcf59c4|21ef754e694a818d|-421373557||t19501.4267100244s|5e592d62fb2f7eba|46296|rds|local|vector|||0.154||
+ky_tornadoes_plot|stem|3adc3cd4c2caceae|4fb595efabc12ad0|deb732f007c98480|289596895||t19501.4267359977s|fece64f1ae795f77|17946592|rds|local|vector|||0.066||
+ky_towns|stem|72e64a8d30f52e25|3a58f3127d907af1|dbdc649f8fec6e40|729882822||t19501.426707941s|a147417cf14a9968|965|rds|local|vector|||0.214||
+save_plot|stem|3b0bb18749d7f3a5|55af441a73fea0c8|ad786656a638cf4a|-938188392|plot/ky-tornadoes-plot.png|t19501.4259948163s|662b27d6f55fde0e|737148|file|local|vector|||2.214|st_point_on_surface may not give correct results for longitudelatitude data|
 to_linestring|function|99294bc3dc697528|||||||||||||||
-tornados|stem|f787c59c038fe587|ccc41c45ed38acf6|7199b9143a2e7ccc|78674093||t19500.6365956709s|9dccd1fcc47ac6ff|1681357|rds|local|vector|||3.182||
+tornados|stem|f787c59c038fe587|ccc41c45ed38acf6|7199b9143a2e7ccc|78674093||t19501.4267053484s|9dccd1fcc47ac6ff|1681357|rds|local|vector|||1.108||

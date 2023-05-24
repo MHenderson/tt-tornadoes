@@ -15,9 +15,13 @@ ky_tornadoes <- ky_tornadoes |>
   filter(!is.na(mag)) |>
   mutate(decade = floor_decade(yr))
 
+decade_labels <- paste0(seq(1950, 2020, 10), "s")
+decade_labels[1] <- "1952 - 1959"
+decade_labels[8] <- "2020 - 2022"
+names(decade_labels) <- seq(1950, 2020, 10)
+
 ggplot() +
   geom_sf(data = kentucky, colour = "black") +
-  geom_sf(data = ky_counties, fill = "lightgrey", color = "black", linewidth = 0.1) +
   geom_sf(data = ky_tornadoes,
           aes(colour = as.factor(mag)),
           linewidth = 1,
@@ -28,5 +32,11 @@ ggplot() +
   theme(legend.position = "bottom") +
   guides(colour = guide_legend(nrow = 1, byrow = TRUE)) +
   labs(
-    colour = "Intensity (EF-Scale)"
+    colour = "Tornado Intensity\n(F-Scale before 2007, EF-Scale after 2007)"
+  ) +
+  facet_wrap(~decade, labeller = labeller(decade = decade_labels)) +
+  labs(
+    title = "Tornado Paths",
+    subtitle = "Kentucky (1952 -  2022)",
+    caption = "Data: NOAA's National Weather Service Storm Prediction Center\nGraphics: Matthew Henderson\nIntensities on F scale or EF scale (since 2007)"
   )
