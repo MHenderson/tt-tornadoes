@@ -1,11 +1,7 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 floor_decade|function|fd3c64b3b4b8c2de|||||||||||||||
-kentucky|stem|2d630fdece6571ec|3a9f4a6eb419c1fa|dce3a00c1c3087d6|-1432312807||t19501.4543957675s|2f3620100d4a9126|390813|rds|local|vector|||3.776||
-ky_counties|stem|99c9b914775693df|5b15e4779e0695fd|d51b5b11aac2e9b8|-1737481470||t19501.4266869682s|6033e6fde96243cf|2930658|rds|local|vector|||4.708||
-ky_landmarks|stem|9e1c38e1ec84e1a6|e96e3ba2b22fdc40|1910706c38146160|1601931491||t19501.4266255773s|d009e7d7cfcecb25|473278|rds|local|vector|||2.414||
-ky_tornadoes|stem|a39db056595a9208|80c3c0c19fcf59c4|21ef754e694a818d|-421373557||t19501.4267100244s|5e592d62fb2f7eba|46296|rds|local|vector|||0.154||
-ky_tornadoes_plot|stem|2c96a5361696dbcc|6db1c9e4abdb6405|4b922ef7bfc9b58d|289596895||t19501.4574763736s|faeb60e2ccbfdbba|2741828|rds|local|vector|||0.084||
-ky_towns|stem|72e64a8d30f52e25|3a58f3127d907af1|dbdc649f8fec6e40|729882822||t19501.426707941s|a147417cf14a9968|965|rds|local|vector|||0.214||
-save_plot|stem|6262e52c14a5e093|55af441a73fea0c8|e439862ee9598bf2|-938188392|plot/ky-tornadoes-plot.png|t19501.45750193s|0b38b9030c721a73|535750|file|local|vector|||2.199||
-to_linestring|function|99294bc3dc697528|||||||||||||||
-tornados|stem|f787c59c038fe587|ccc41c45ed38acf6|7199b9143a2e7ccc|78674093||t19501.4267053484s|9dccd1fcc47ac6ff|1681357|rds|local|vector|||1.108||
+kentucky|stem|2d630fdece6571ec|3a9f4a6eb419c1fa|dce3a00c1c3087d6|-1432312807||t19501.6900074427s|2f3620100d4a9126|390813|rds|local|vector|||2.67||
+ky_tornadoes|stem|a39db056595a9208|80c3c0c19fcf59c4|21ef754e694a818d|-421373557||t19501.6900492484s|5e592d62fb2f7eba|46296|rds|local|vector|||0.129||
+ky_tornadoes_plot|stem|2c96a5361696dbcc|6db1c9e4abdb6405|4b922ef7bfc9b58d|289596895||t19501.6900578596s|faeb60e2ccbfdbba|2741828|rds|local|vector|||0.063||
+save_plot|stem|6262e52c14a5e093|55af441a73fea0c8|e439862ee9598bf2|-938188392|plot/ky-tornadoes-plot.png|t19501.6900954987s|0b38b9030c721a73|535750|file|local|vector|||3.245||
+tornados|stem|f787c59c038fe587|ccc41c45ed38acf6|7199b9143a2e7ccc|78674093||t19501.6900473503s|9dccd1fcc47ac6ff|1681357|rds|local|vector|||2.935||
