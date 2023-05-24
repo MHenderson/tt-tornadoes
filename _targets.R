@@ -38,24 +38,6 @@ list(
     }
   ),
   tar_target(
-    name = ky_counties,
-    command = counties(state = "KY") |> clean_names()
-  ),
-  tar_target(
-    name = ky_landmarks,
-    command = landmarks("KY")
-  ),
-  tar_target(
-    name = ky_towns,
-    command = {
-
-      ky_landmarks |>
-        filter(FULLNAME %in% c("Berea", "Bowling Green")) |>
-        st_transform(crs = 4326)
-    
-    }
-  ),
-  tar_target(
     name = ky_tornadoes,
     command = {
 
