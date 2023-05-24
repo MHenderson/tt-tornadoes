@@ -26,7 +26,16 @@ ggplot() +
           aes(colour = as.factor(mag)),
           linewidth = 1,
           arrow = arrow(angle = 45, ends = "last", type = "open", length = unit(0.05, "inches"))) +
-  theme_void() +
+  #theme_void() +
+  theme_ipsum_rc() +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+         axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+         axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()
+  ) +
   scale_color_brewer(palette = "Reds") +
   #facet_wrap(~ decade) +
   theme(legend.position = "bottom") +
@@ -36,7 +45,7 @@ ggplot() +
   ) +
   facet_wrap(~decade, labeller = labeller(decade = decade_labels)) +
   labs(
-    title = "Tornado Paths",
-    subtitle = "Kentucky (1952 -  2022)",
-    caption = "Data: NOAA's National Weather Service Storm Prediction Center\nGraphics: Matthew Henderson\nIntensities on F scale or EF scale (since 2007)"
+    title = "Tornado Paths in Kentucky",
+    subtitle = "1952 - 2022",
+    caption = "Data: NOAA's National Weather Service Storm Prediction Center\nGraphics: Matthew Henderson"
   )
