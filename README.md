@@ -3,7 +3,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-|-------------|------------------------------------------------------------------------------------------|
+|             |                                                                                          |
+|------------:|:-----------------------------------------------------------------------------------------|
 | Website     | [https://mhenderson.github.io/tt-tornadoes/](https://mhenderson.github.io/tt-tornadoes/) |
 | Source code | [https://github.com/MHenderson/tt-tornadoes](https://github.com/MHenderson/tt-tornadoes) |
 
