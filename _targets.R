@@ -1,30 +1,15 @@
-# Created by use_targets().
-# Follow the comments below to fill in this target script.
-# Then follow the manual to check and run the pipeline:
-#   https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline # nolint
-
-# Load packages required to define the pipeline:
 library(targets)
-# library(tarchetypes) # Load other packages as needed. # nolint
 
-# Set target options:
 tar_option_set(
-  packages = c("dplyr", "ggplot2", "hrbrthemes", "janitor", "readr", "sf", "tibble", "tigris"), # packages that your targets need to run
-  format = "rds" # default storage format
-  # Set other options as needed.
+  packages = c("dplyr", "ggplot2", "hrbrthemes", "janitor", "readr", "sf", "tibble", "tigris"),
+    format = "rds"
 )
 
-# tar_make_clustermq() configuration (okay to leave alone):
 options(clustermq.scheduler = "multicore")
 
-# tar_make_future() configuration (okay to leave alone):
-# Install packages {{future}}, {{future.callr}}, and {{future.batchtools}} to allow use_targets() to configure tar_make_future() options.
+# https://stackoverflow.com/questions/35352914/floor-a-year-to-the-decade-in-r
+floor_decade <- function(value){ return(value - value %% 10) }
 
-# Run the R scripts in the R/ folder with your custom functions:
-tar_source()
-# source("other_functions.R") # Source other scripts as needed. # nolint
-
-# Replace the target list below with your own:
 list(
   tar_target(
     name = tornados,
@@ -83,16 +68,22 @@ list(
            legend.position = "bottom"
         ) +
         labs(
-          title = "Tornado Paths in Kentucky",
+             title = "Tornado Paths in Kentucky",
           subtitle = "1952 - 2022",
-          caption = "Data: NOAA's National Weather Service Storm Prediction Center\nGraphics: Matthew Henderson",
-          colour = "Tornado Intensity\n(F-Scale before 2007, EF-Scale after 2007)"
+           caption = "Data: NOAA's National Weather Service Storm Prediction Center\nGraphics: Matthew Henderson",
+            colour = "Tornado Intensity\n(F-Scale before 2007, EF-Scale after 2007)"
         )
     }
   ),
   tar_target(
     name = save_plot,
-    command = ggsave(plot = ky_tornadoes_plot, filename = "plot/ky-tornadoes-plot.png", bg = "white", width = 10, height = 8),
-    format = "file"
+    command = ggsave(
+          plot = ky_tornadoes_plot,
+      filename = "plot/ky-tornadoes-plot.png",
+            bg = "white",
+         width = 10,
+        height = 8
+    ),
+        format = "file"
   )
 )
