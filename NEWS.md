@@ -7,3 +7,4 @@
 * Data from NOAA's National Weather Service Storm Prediction Service.
 * TIGER/Line shapefiles from the United States Census Bureau via the tigris package.
 * Plot made with ggplot2, hrbrthemes and sf packages.
+* Make build.
