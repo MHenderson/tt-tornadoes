@@ -1,9 +1,9 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-kentucky|stem|9ac2c59bfaf1cd7c|f904a232c8de80f4|2c530c1562a7fbd1|103782780||t20113.7897657063s|s390816b|390816|rds|local|vector|||1.458||
-tornados|stem|631384afbe82a9a8|8e7db01f768e72d1|2c530c1562a7fbd1|-1548029183||t20113.7897901977s|s1681357b|1681357|rds|local|vector|||1.678||
-ky_tornadoes|stem|77a3aa2c3ac05f96|2ca961b26d48cdff|e0eaedd6a35aa0d8|-1356402195||t20113.7897918181s|s46178b|46178|rds|local|vector|||0.121||
-ky_tornadoes_plot|stem|ca3b2a749f8dc0ef|2b644881808ab1fb|6d4bdaa567b5279c|-251414650||t20113.7905187795s|s2804087b|2804087|rds|local|vector|||0.052||
+kentucky|stem|9ac2c59bfaf1cd7c|f904a232c8de80f4|2c530c1562a7fbd1|103782780||t20132.6763587741s|s390816b|390816|rds|local|vector|||5.002||
+tornados|stem|631384afbe82a9a8|8e7db01f768e72d1|2c530c1562a7fbd1|-1548029183||t20132.6763868301s|s1681357b|1681357|rds|local|vector|||1.968||
+ky_tornadoes|stem|77a3aa2c3ac05f96|2ca961b26d48cdff|e0eaedd6a35aa0d8|-1356402195||t20132.6763881728s|s46178b|46178|rds|local|vector|||0.097||
+ky_tornadoes_plot|stem|42488a3a9eec3b57|2b644881808ab1fb|6d4bdaa567b5279c|-251414650||t20132.6763953951s|s2803500b|2803500|rds|local|vector|||0.102||
 floor_decade|function|13e6d04cbeb2df4f
-object|object|8ec525c1a1b89323
-.Random.seed|object|06256b8adf5d7a72
-save_plot|stem|d033fcf1e66ddc2b|cb3e66c99f6e2f85|e474c7c8a80fe0b7|-1898771178|plot/ky-tornadoes-plot.png|t20113.79685754s|s535753b|535753|file|local|vector|||1.487||
+object|object|cad8e4157b51e77f
+.Random.seed|object|a776d8818de4aadf
+save_plot|stem|d033fcf1e66ddc2b|cb3e66c99f6e2f85|efc1be246d310a11|-1898771178|plot/ky-tornadoes-plot.png|t20132.6766234082s|s535753b|535753|file|local|vector|||1.801||
